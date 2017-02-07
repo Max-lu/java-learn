@@ -1,0 +1,101 @@
+<?xml version="1.0"?>
+<web-app version="2.4"
+         xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+    <display-name>Spring MVC Application</display-name>
+
+    <servlet>
+        <servlet-name>DownloadServlet</servlet-name>
+        <servlet-class>servlet.filedownload.DownLoadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DownloadServlet</servlet-name>
+        <url-pattern>/download</url-pattern>
+    </servlet-mapping>
+
+    <!--JCronTab-->
+    <!--<servlet>-->
+        <!--<servlet-name>LoadOnStartupServlet</servlet-name>-->
+        <!--<servlet-class>org.jcrontab.web.loadCrontabServlet</servlet-class>-->
+        <!--<init-param>-->
+            <!--<param-name>PROPERTIES_FILE</param-name>-->
+            <!--<param-value>jcrontab.properties</param-value>-->
+        <!--</init-param>-->
+        <!--<load-on-startup>1</load-on-startup>-->
+    <!--</servlet>-->
+
+    <!--<servlet-mapping>-->
+        <!--<servlet-name>LoadOnStartupServlet</servlet-name>-->
+        <!--<url-pattern>/Startup</url-pattern>-->
+    <!--</servlet-mapping>-->
+
+    <welcome-file-list>
+        <welcome-file>welcome.jsp</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>sessionServlet</servlet-name>
+        <servlet-class>servlet.SessionServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>sessionServlet</servlet-name>
+        <url-pattern>/session</url-pattern>
+    </servlet-mapping>
+
+    <listener>
+        <listener-class>task.jcron.JobInitListener</listener-class>
+    </listener>
+
+
+    <!--安全验证-->
+    <!--<security-constraint>-->
+        <!--<web-resource-collection>-->
+            <!--<web-resource-name>JSP pages</web-resource-name>-->
+            <!--<url-pattern>*.jsp</url-pattern>-->
+        <!--</web-resource-collection>-->
+        <!--<auth-constraint/>-->
+    <!--</security-constraint>-->
+
+    <security-role>
+        <role-name>member</role-name>
+    </security-role>
+    <security-role>
+        <role-name>manager</role-name>
+    </security-role>
+
+    <security-constraint>
+        <web-resource-collection>
+            <web-resource-name>Servlet</web-resource-name>
+            <url-pattern>/download</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <role-name>member</role-name>
+            <role-name>manager</role-name>
+        </auth-constraint>
+    </security-constraint>
+
+    <!--基本访问验证-->
+    <!--<login-config>-->
+        <!--<auth-method>BASIC</auth-method>-->
+        <!--<realm-name>Members Only</realm-name>-->
+    <!--</login-config>-->
+
+    <!--摘要访问验证-->
+    <!--<login-config>-->
+        <!--<auth-method>DIGEST</auth-method>-->
+        <!--<realm-name>Members Only</realm-name>-->
+    <!--</login-config>-->
+
+    <!--基于自定义表单的验证-->
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/login.html</form-login-page>
+            <form-error-page>/error.html</form-error-page>
+        </form-login-config>
+    </login-config>
+
+</web-app>

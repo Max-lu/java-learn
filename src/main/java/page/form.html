@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>form test</title>
+    <script type="text/javascript">
+        window.onload = function () {
+            console.log(document.forms.test.method);
+        }
+    </script>
+    <style>
+        form input{
+
+        }
+    </style>
+</head>
+<body>
+    <form name="test" accept-charset="UTF-8" action="button.html" target="_blank" enctype="text/plain" method="post"
+          autocomplete="on" novalidate="novalidate">
+        <label for="name">name:</label>
+        <input id="name" name="name" type="text" autocomplete="on">
+        <label for="age">age:</label>
+        <input id="age" name="age" type="text" pattern="\d+" title="number only">
+
+        <input type="color">
+        <input type="tel">
+        <input type="week">
+        <input type="url">
+        <input type="datetime-local">
+        <input type="range">
+        <input type="time">
+
+        <input type="reset">
+        <input name="submit" type="submit" value="submit">
+
+    </form>
+
+</body>
+
+</html>
