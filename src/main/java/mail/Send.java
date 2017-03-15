@@ -32,7 +32,7 @@ public class Send {
         //Exception in thread "main" javax.mail.NoSuchProviderException: smtp
         session.setDebug(true);
         Transport transport = session.getTransport("smtp");
-        transport.connect("smtp.163.com", "shmily9301@163.com", "K5CCCBWX9302");
+        transport.connect("smtp.163.com", "shmily9301@163.com", "");
         //发送
         transport.sendMessage(message, message.getAllRecipients());
         transport.close();
