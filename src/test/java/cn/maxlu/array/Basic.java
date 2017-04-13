@@ -1,4 +1,4 @@
-package array;
+package cn.maxlu.array;
 
 import org.junit.Test;
 

@@ -1,4 +1,4 @@
-package shift;
+package cn.maxlu.shift;
 
 import org.junit.Test;
 

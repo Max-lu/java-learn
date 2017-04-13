@@ -1,4 +1,4 @@
-package string;
+package cn.maxlu.string;
 
 import org.junit.Test;
 

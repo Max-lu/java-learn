@@ -1,4 +1,4 @@
-package json.fastjson;
+package cn.maxlu.json.fastjson;
 
 import com.alibaba.fastjson.JSON;
 import org.junit.Test;

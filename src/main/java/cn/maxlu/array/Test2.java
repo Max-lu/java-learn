@@ -1,4 +1,4 @@
-package array;
+package cn.maxlu.array;
 
 import java.util.Arrays;
 import java.util.HashSet;

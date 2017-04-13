@@ -1,4 +1,4 @@
-package json.fastjson;
+package cn.maxlu.json.fastjson;
 
 /**
  * Created by luwei on 2017/4/7.

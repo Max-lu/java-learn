@@ -1,4 +1,4 @@
-package java8.date;
+package cn.maxlu.java8.date;
 
 import org.junit.Test;
 

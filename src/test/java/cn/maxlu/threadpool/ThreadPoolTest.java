@@ -1,4 +1,4 @@
-package threadpool;
+package cn.maxlu.threadpool;
 
 import org.junit.Test;
 
@@ -104,6 +104,34 @@ public class ThreadPoolTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * 使用jconsole工具观察线程变化情况
+     * 可观测到线程峰值达到10000+
+     * @throws InterruptedException
+     */
+    @Test
+    public void jconsoleTest() throws InterruptedException {
+        //等待jconsole连接
+        Thread.sleep(20 * 1000);
+
+        ExecutorService service = Executors.newCachedThreadPool();
+        for (int i = 0; i < 10000; i++) {
+            service.execute(() -> {
+                while (true) {
+                    System.out.println(Thread.currentThread().getName());
+                    try {
+                        //占用线程，100s后释放
+                        Thread.sleep(100 * 1000);
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
+            });
+        }
+
+        Thread.sleep(20 * 1000);
     }
 
 }
