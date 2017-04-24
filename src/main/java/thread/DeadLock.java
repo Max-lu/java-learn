@@ -19,15 +19,15 @@ public class DeadLock extends Thread{
     public void accessA() {
         flag = false;
         synchronized (A) {
-            System.out.println(this.getName() + ";get A");
+            System.out.println(this.getName() + ";get cn.maxlu.A");
             try {
                 Thread.sleep(10000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(this.getName() + ";wait B");
+            System.out.println(this.getName() + ";wait cn.maxlu.B");
             synchronized (B) {
-                System.out.println(this.getName() + ";get B");
+                System.out.println(this.getName() + ";get cn.maxlu.B");
             }
         }
 
@@ -36,15 +36,15 @@ public class DeadLock extends Thread{
     public void accessB() {
         flag = true;
         synchronized (B) {
-            System.out.println(this.getName() + ";get B");
+            System.out.println(this.getName() + ";get cn.maxlu.B");
             try {
                 Thread.sleep(10000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            System.out.println(this.getName() + ";wait A");
+            System.out.println(this.getName() + ";wait cn.maxlu.A");
             synchronized (A) {
-                System.out.println(this.getName() + ";get A");
+                System.out.println(this.getName() + ";get cn.maxlu.A");
             }
         }
 
