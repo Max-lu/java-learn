@@ -1,4 +1,4 @@
-package annotation;
+package annotation.policy.runtime;
 
 /**
  * Created by max.lu on 2016/1/26.
@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
-public @interface TestAnnotation {
+@interface TestAnnotation {
     String name() default "max";
     int age() default 18;
 }

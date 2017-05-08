@@ -1,9 +1,9 @@
-package annotation;
+package annotation.policy.source;
 
 /**
  * Created by max.lu on 2016/1/26.
  */
-public class MyClass {
+class SimpleObject {
     @TestAnnotation
     public void method1()
     {
