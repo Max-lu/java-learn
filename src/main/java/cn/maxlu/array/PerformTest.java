@@ -9,7 +9,7 @@ import java.util.Set;
 /**
  * Created by max.lu on 2016/1/27.
  */
-public class Test {
+public class PerformTest {
     public static void main(String[] args) {
         test("loop");
         test("list");
@@ -22,7 +22,7 @@ public class Test {
             run(method);
         }
         long endTime = System.nanoTime();
-        System.out.println(method + " cost:" + (endTime - startTime) / 1000 + " ms");
+        System.out.println(method + " cost:" + (endTime - startTime) / 1000000 + " s");
     }
 
     private static void run(String method) {

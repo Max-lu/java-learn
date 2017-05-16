@@ -1,8 +1,5 @@
 package task.schedule;
 
-import copy.Teacher;
-
-import java.sql.Time;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
 import java.util.concurrent.TimeUnit;

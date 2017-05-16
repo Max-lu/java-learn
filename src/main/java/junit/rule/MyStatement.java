@@ -1,4 +1,4 @@
-package rule;
+package junit.rule;
 
 
 import org.junit.runners.model.Statement;

@@ -1,4 +1,4 @@
-package deleteFile;
+package cn.maxlu.java.learn.io;
 
 import org.junit.Assert;
 
@@ -7,13 +7,13 @@ import java.io.File;
 /**
  * Created by max.lu on 2016/2/2.
  */
-public class Test {
+public class FileDeleteTest {
 
     public static void main(String[] args) {
         delete("E:\\test\\dir");
     }
 
-    public static boolean delete(String name) {
+    private static boolean delete(String name) {
         File file = new File(name);
         if (file.exists()) {
             if (file.isFile()) {

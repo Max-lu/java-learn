@@ -182,6 +182,20 @@
             <artifactId>netty-all</artifactId>
             <version>5.0.0.Alpha2</version>
         </dependency>
+
+        <!--boneCP 数据库连接池-->
+        <dependency>
+            <groupId>com.jolbox</groupId>
+            <artifactId>bonecp</artifactId>
+            <version>0.8.0.RELEASE</version>
+        </dependency>
+
+        <!--对象图 导航语言-->
+        <dependency>
+            <groupId>ognl</groupId>
+            <artifactId>ognl</artifactId>
+            <version>3.2.1</version>
+        </dependency>
     </dependencies>
 
     <build>

@@ -1,4 +1,4 @@
-package rule;
+package junit.rule;
 
 import org.junit.rules.MethodRule;
 import org.junit.runners.model.FrameworkMethod;

@@ -3,7 +3,7 @@ package copy;
 /**
  * Created by max.lu on 2016/2/2.
  */
-public class Teacher implements Cloneable {
+class Teacher implements Cloneable {
 
     public Teacher(){
 
