@@ -1,13 +1,12 @@
-package cn.maxlu;
+package cn.maxlu.java.learn.io;
 
 import java.io.StreamTokenizer;
 import java.io.StringReader;
 
 /**
- * Created by lw on 2016/7/18.
+ * Created by luwei on 2017/5/22.
  */
-
-public class Test {
+public class StreamTokenizerTest {
 
     public static void main(String[] args) throws Exception {
         StreamTokenizer tokenizer = new StreamTokenizer(new StringReader("Mary had 1 little lamb..."));
@@ -20,11 +19,6 @@ public class Test {
                 System.out.println();
             }
         }
-    }
-
-    @SuppressWarnings("unchecked")
-    private static <S> S get() {
-        return (S) ("123");
     }
 
 }

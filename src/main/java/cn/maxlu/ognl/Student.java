@@ -32,4 +32,14 @@ class Student {
     public String name() {
         return name + "22";
     }
+
+    public String fact(Teacher teacher) {
+        return "get a teacher : " + teacher.getName();
+    }
+
+    private String fact = "name";
+
+    public String getFact() {
+        return fact;
+    }
 }

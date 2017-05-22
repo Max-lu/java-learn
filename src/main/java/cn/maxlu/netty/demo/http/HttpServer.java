@@ -15,7 +15,7 @@ import io.netty.handler.codec.http.HttpResponseEncoder;
  * Created by luwei on 2017/5/10.
  */
 public class HttpServer {
-    public void bind(int port) throws Exception {
+    private static void bind(int port) throws Exception {
         EventLoopGroup bossGroup = new NioEventLoopGroup();
         EventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
@@ -46,13 +46,6 @@ public class HttpServer {
 
     public static void main(String[] args) throws Exception {
         int port = 8080;
-        if (args != null && args.length > 0) {
-            try {
-                port = Integer.valueOf(args[0]);
-            } catch (NumberFormatException e) {
-
-            }
-        }
-        new HttpServer().bind(port);
+        bind(port);
     }
 }

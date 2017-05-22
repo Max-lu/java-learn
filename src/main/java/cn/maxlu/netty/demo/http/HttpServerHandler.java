@@ -11,13 +11,11 @@ import io.netty.handler.codec.http.*;
  */
 public class HttpServerHandler extends ChannelHandlerAdapter {
 
-    private String messageId = "";
-    private static final String MESSAGE_ID = "messageId";
-
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         if (msg instanceof HttpRequest) {
             HttpRequest request = (HttpRequest) msg;
+            System.err.println(request.headers());
         }
         if (msg instanceof HttpContent) {
             HttpContent content = (HttpContent) msg;
