@@ -18,7 +18,7 @@ public class NioTest {
     /**
      * FileChannel不支持非阻塞模式，因为很多文件系统不支持非阻塞模式，比如linux文件系统就不支持阻塞模式
      * 所以FileChannel没有实现SelectableChannel接口，不能注册到selector上
-     * 不过java提供了AsynchronousFileChannel来支持非阻塞模式，demo<code>cn.maxlu.java.learn.nio.AsynchronousFileChannelTest</code>
+     * 不过java提供了AsynchronousFileChannel来支持非阻塞模式，demo<code>cn.maxlu.java.learn.demo.AsynchronousFileChannelTest</code>
      */
     public void basicUseTest() throws Exception {
         RandomAccessFile file = new RandomAccessFile(FILE_NAME, "rw");
