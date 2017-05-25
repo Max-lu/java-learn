@@ -12,8 +12,8 @@ public class ConnectTest {
     public void connect() {
         try {
             //Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://10.24.1.84:3306/test", "root", "admin");
-            PreparedStatement pst = conn.prepareStatement("SELECT * FROM luweitest");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/test", "root", "root");
+            PreparedStatement pst = conn.prepareStatement("SELECT * FROM test");
             ResultSet resultSet = pst.executeQuery();
             while (resultSet.next()){
                 int a = resultSet.getInt(1);

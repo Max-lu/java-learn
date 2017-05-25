@@ -190,7 +190,7 @@
             <version>0.8.0.RELEASE</version>
         </dependency>
 
-        <!--对象图 导航语言-->
+        <!--对象图导航语言-->
         <dependency>
             <groupId>ognl</groupId>
             <artifactId>ognl</artifactId>

@@ -12,12 +12,12 @@ import java.sql.ResultSet;
 public class DataSourceConf {
     public static void main(String[] args) throws Exception {
         BoneCPDataSource ds = new BoneCPDataSource();
-        ds.setJdbcUrl("jdbc:mysql://10.24.1.84:3306/test");
-        ds.setUsername("luwei");
-        ds.setPassword("luwei123");
+        ds.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/test");
+        ds.setUsername("root");
+        ds.setPassword("root");
 
         Connection connection = ds.getConnection();
-        PreparedStatement pst = connection.prepareStatement("SELECT * FROM luweitest");
+        PreparedStatement pst = connection.prepareStatement("SELECT * FROM test");
         ResultSet resultSet = pst.executeQuery();
         while (resultSet.next()){
             int a = resultSet.getInt(1);

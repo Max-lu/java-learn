@@ -1,7 +1,8 @@
 package cn.maxlu.java.learn.reflect.proxy.my.v1;
 
-import cn.maxlu.ijava.lang.reflect.proxy.my.DefaultServiceImpl;
-import cn.maxlu.ijava.lang.reflect.proxy.my.IService;
+import cn.maxlu.java.learn.reflect.proxy.my.DefaultServiceImpl;
+import cn.maxlu.java.learn.reflect.proxy.my.IService;
+
 
 /**
  * Created by luwei on 2017/5/3.

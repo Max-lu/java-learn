@@ -1,7 +1,8 @@
 package cn.maxlu.java.learn.reflect.proxy.my.v3;
 
-import cn.maxlu.ijava.lang.reflect.proxy.my.DefaultService2Impl;
-import cn.maxlu.ijava.lang.reflect.proxy.my.IService2;
+
+import cn.maxlu.java.learn.reflect.proxy.my.DefaultService2Impl;
+import cn.maxlu.java.learn.reflect.proxy.my.IService2;
 
 import java.util.HashMap;
 

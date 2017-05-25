@@ -13,11 +13,11 @@ import java.net.URLClassLoader;
 /**
  * Created by luwei on 2017/5/3.
  */
-public class Proxy_v3 implements Serializable {
+class Proxy_v3 implements Serializable {
 
     private static final long serialVersionUID = -1L;
 
-    public static <T> T newProxyInstance(Class<T> clazz, InvokeHandler invokeHandler) throws Exception {
+    static <T> T newProxyInstance(Class<T> clazz, InvokeHandler invokeHandler) throws Exception {
 
         String clazzName = clazz.getName();
 

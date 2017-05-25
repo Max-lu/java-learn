@@ -13,14 +13,14 @@ import java.sql.ResultSet;
 public class ManualConf {
     public static void main(String[] args) throws Exception{
         BoneCPConfig config = new BoneCPConfig();
-        config.setJdbcUrl("jdbc:mysql://10.24.1.84:3306/test");
-        config.setUsername("luwei");
-        config.setPassword("luwei123");
+        config.setJdbcUrl("jdbc:mysql://127.0.0.1:3306/test");
+        config.setUsername("root");
+        config.setPassword("root");
 
         BoneCP connectionPool = new BoneCP(config);
 
         Connection connection = connectionPool.getConnection();
-        PreparedStatement pst = connection.prepareStatement("SELECT * FROM luweitest");
+        PreparedStatement pst = connection.prepareStatement("SELECT * FROM test");
         ResultSet resultSet = pst.executeQuery();
         while (resultSet.next()){
             int a = resultSet.getInt(1);

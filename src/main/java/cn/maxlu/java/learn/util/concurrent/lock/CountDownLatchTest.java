@@ -10,14 +10,13 @@ public class CountDownLatchTest {
 
     private static final CountDownLatch countDownLatch = new CountDownLatch(2);
 
-    private static final ExecutorService service = Executors.newFixedThreadPool(2);
-
-
     public static void main(String[] args) throws InterruptedException, ExecutionException {
+        ExecutorService service = Executors.newFixedThreadPool(2);
         System.out.println("count down begin:");
 
         MyTask myTask = new MyTask();
         service.invokeAll(Arrays.asList(myTask, myTask));
+        //主线程阻塞，等待其他线程执行countDown
         countDownLatch.await();
 
         System.out.println(countDownLatch.getCount());
