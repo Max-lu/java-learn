@@ -1,10 +1,10 @@
-package cn.maxlu;
+package cn.maxlu.java.learn.lang;
 
 /**
  * Created by lw on 2016/7/18.
  */
 
-public class Test {
+public class ThreadInterruptedTest {
 
     public static void main(String[] args) throws Exception {
         Thread t1 = new Thread("t1") {
