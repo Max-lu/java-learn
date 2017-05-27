@@ -1,4 +1,4 @@
-package cn.maxlu.java.learn.util.concurrent.lock;
+package cn.maxlu.java.learn.util.concurrent;
 
 import java.util.Arrays;
 import java.util.concurrent.*;
@@ -16,7 +16,7 @@ public class CountDownLatchTest {
 
         MyTask myTask = new MyTask();
         service.invokeAll(Arrays.asList(myTask, myTask));
-        //主线程阻塞，等待其他线程执行countDown
+        //主线程阻塞，等待其他线程执行countDown。一个线程可执行多次countDown
         countDownLatch.await();
 
         System.out.println(countDownLatch.getCount());

@@ -1,4 +1,4 @@
-package cn.maxlu.java.learn.lang;
+package cn.maxlu.java.learn.lang.thread;
 
 /**
  * Created by lw on 2016/7/18.

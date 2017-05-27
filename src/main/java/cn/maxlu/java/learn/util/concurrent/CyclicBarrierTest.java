@@ -1,4 +1,4 @@
-package cn.maxlu.java.learn.util.concurrent.lock;
+package cn.maxlu.java.learn.util.concurrent;
 
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;

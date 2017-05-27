@@ -1,4 +1,4 @@
-package cn.maxlu;
+package cn.maxlu.java.learn.util.concurrent.executor;
 
 import java.util.HashSet;
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.concurrent.Future;
 /**
  * Created by luwei on 2017/5/25.
  */
-public class Test {
+public class ThreadPoolExecutorTest {
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newSingleThreadExecutor();

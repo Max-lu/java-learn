@@ -1,4 +1,4 @@
-package cn.maxlu.java.learn.lang;
+package cn.maxlu.java.learn.lang.thread;
 
 /**
  * Created by lw on 2016/7/18.
@@ -15,6 +15,7 @@ public class ThreadInterruptedTest {
                     Thread.sleep(10 * 1000);
                 } catch (InterruptedException e) {
                     //isInterrupted方法总是返回false，因为此时中断状态已被重置
+                    //The interrupted status of the current thread is cleared when this exception is thrown.
                     System.out.println("Thread t1 is interrupted? -> " + Thread.currentThread().isInterrupted());
                     System.out.println("Thread t1 was interrupted");
                     System.out.println("Thread t1 state : " + Thread.currentThread().getState());
