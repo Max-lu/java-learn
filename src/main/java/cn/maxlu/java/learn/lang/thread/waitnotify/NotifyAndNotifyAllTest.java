@@ -10,7 +10,7 @@ public class NotifyAndNotifyAllTest {
 
     private static final Object lock = new Object();
 
-    private static final boolean NOTIFY_ALL = false;
+    private static final boolean NOTIFY_ALL = true;
 
     public static void main(String[] args) throws Exception {
         Thread thread1 = new MyThread("thread1");

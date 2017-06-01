@@ -1,9 +1,9 @@
-package cn.maxlu;
+package cn.maxlu.java.learn.lang.thread;
 
 /**
  * Created by luwei on 2017/5/25.
  */
-public class Test {
+public class ExceptionHandlerTest {
 
     public static void main(String[] args) throws Exception {
 
