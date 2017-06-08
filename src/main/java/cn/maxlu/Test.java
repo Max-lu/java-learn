@@ -1,31 +1,19 @@
 package cn.maxlu;
 
+import java.lang.reflect.Modifier;
+
 /**
  * Created by luwei on 2017/5/25.
  */
 public class Test {
 
     public static void main(String[] args) throws Exception {
+        String s = Modifier.toString(Test.class.getModifiers());
+        System.out.println(s);
+    }
 
-        try {
-            Thread thread = new Thread() {
-                @Override
-                public void run() {
-                    throw new RuntimeException("test");
-                }
-            };
+    protected void hello() {
 
-            thread.setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
-                @Override
-                public void uncaughtException(Thread t, Throwable e) {
-                    System.out.println("catch exception 1");
-                }
-            });
-
-            thread.start();
-        } catch (Throwable e) {
-            System.out.println("catch exception 2"); //unable to catch exception of thread
-        }
     }
 
 

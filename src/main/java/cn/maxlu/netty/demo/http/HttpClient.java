@@ -17,7 +17,7 @@ import java.net.URI;
 /**
  * Created by luwei on 2017/5/17.
  */
-public class HttpClient {
+class HttpClient {
     private void connect(String host, int port) throws Exception {
         EventLoopGroup workerGroup = new NioEventLoopGroup();
 

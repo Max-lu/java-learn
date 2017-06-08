@@ -10,7 +10,7 @@ import org.jboss.netty.handler.codec.http.HttpHeaders;
 /**
  * Created by luwei on 2017/5/17.
  */
-public class HttpClientHandler extends ChannelHandlerAdapter {
+class HttpClientHandler extends ChannelHandlerAdapter {
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
         if (msg instanceof HttpResponse)
